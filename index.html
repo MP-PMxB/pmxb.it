@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PMxB Coming Soon</title>
+  <style>
+    @font-face {
+      font-family: 'Intuitive';
+      src: url('intuitive.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'AristotelicaDisplay';
+      src: url('Aristotelica Display ExtraLight Trial.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'AristotelicaDisplayDemi';
+      src: url('Aristotelica Display DemiBold Trial.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'AristotelicaDisplay', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+      color: #5C6F78;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header img {
+      max-width: 320px;
+      margin-top: 40px;
+    }
+
+    h1 {
+      font-family: 'AristotelicaDisplayDemi', sans-serif;
+      color: #1695D0;
+      font-size: 2.5rem;
+      margin-top: 30px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 400px;
+      z-index: 1;
+    }
+
+    .button {
+      display: block;
+      background-color: #1695D0;
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      margin: 10px 0 5px;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      font-family: 'AristotelicaDisplay', sans-serif;
+    }
+
+    .info {
+      font-family: 'Intuitive', sans-serif;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .button:hover {
+      background-color: #0B638C;
+    }
+
+    .corner {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-image: radial-gradient(circle, #5C9DBB 10px, transparent 12px),
+                        repeating-linear-gradient(135deg, transparent, transparent 5px, #5C9DBB 5px, #5C9DBB 10px);
+      background-position: center;
+      background-size: cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .corner.top {
+      top: 0;
+      left: 0;
+    }
+
+    .corner.bottom {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="corner top"></div>
+  <div class="corner bottom"></div>
+  <header>
+    <img src="logo.png" alt="Logo PMxB" />
+  </header>
+  <h1>LAUNCHING SOON</h1>
+  <p>Website in fase di sviluppo</p>
+  <div class="buttons">
+    <a href="mailto:info@pmxb.it" class="button">Scrivici</a>
+    <div class="info">info@pmxb.it</div>
+    <a href="tel:+393285570214" class="button">Chiama</a>
+    <div class="info">+39 328 55 70 214</div>
+  </div>
+</body>
+</html>
