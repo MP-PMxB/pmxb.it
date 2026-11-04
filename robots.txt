@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pmxb.it/sitemap.xml
