@@ -295,3 +295,9 @@ a.pj:hover h3{color:var(--blue)}
 .pmxb{font-family:'Quicksand','Inter',sans-serif;font-weight:700;font-style:normal;color:var(--blue);letter-spacing:.01em;white-space:nowrap}
 .pmxb i{font-family:'Caveat Brush','Quicksand',cursive;font-style:normal;font-weight:400;font-size:.92em;margin:0 .02em}
 footer .pmxb{font-size:1.05em}
+
+/* HLTL */
+.hltl{margin-top:80px;padding-top:56px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.hltl p{font-size:1.08rem;margin:0}
+.hltl p b{color:var(--ink);font-weight:600}
+@media(max-width:900px){.hltl{grid-template-columns:1fr;gap:20px}}
