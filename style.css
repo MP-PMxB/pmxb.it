@@ -290,3 +290,8 @@ a.pj:hover h3{color:var(--blue)}
 
 .cover{margin:0 0 20px}.cover img{width:100%}
 .cover img{border:0;box-shadow:none;max-width:900px;margin:0 auto}
+
+/* marchio PMxB nel testo */
+.pmxb{font-family:'Quicksand','Inter',sans-serif;font-weight:700;font-style:normal;color:var(--blue);letter-spacing:.01em;white-space:nowrap}
+.pmxb i{font-family:'Caveat Brush','Quicksand',cursive;font-style:normal;font-weight:400;font-size:.92em;margin:0 .02em}
+footer .pmxb{font-size:1.05em}
