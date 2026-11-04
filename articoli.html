@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Articoli | PMxB Engineering Consulting</title>
-<meta name="description" content="Articoli e approfondimenti di PMxB su BIM, project management, gare pubbliche e digitalizzazione delle costruzioni.">
+<meta name="description" content="Articoli e approfondimenti di PMxB su BIM, project management e digitalizzazione delle costruzioni.">
 <link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand"><img src="img/logo.png" alt="PMxB Engineering Consulting"></a>
@@ -29,31 +29,70 @@
 </header>
 
 <main>
-<section class="page-hero">
+<section class="p-hero">
   <div class="wrap">
-    <div class="head"><h2>Articoli</h2><span class="tagline">Idee dal campo</span></div>
-    <p class="sub">Approfondimenti su BIM, project management e digitalizzazione delle costruzioni scritti partendo dai progetti reali.</p>
+    <span class="eyebrow">Articoli</span>
+    <h1>Idee dal <em>campo.</em></h1>
+    <p>Approfondimenti su BIM project management e digitalizzazione delle costruzioni.</p>
   </div>
 </section>
 
-<section style="padding-top:10px">
+<section style="padding:90px 0 130px">
   <div class="wrap">
     <div class="articles" id="lista"></div>
   </div>
 </section>
 
-<section style="padding:20px 0 70px">
-  <div class="wrap">
-    <div class="cta-band">
-      <img src="img/logo.png" alt="">
-      <div>
-        <h2>Hai un progetto? Parlane con PMxB</h2>
-        <p>Raccontaci di cosa hai bisogno. Costruiamo insieme la squadra giusta per la tua commessa.</p>
-      </div>
-      <a href="contatti.html" class="btn btn-white">Contattaci</a>
-    </div>
-  </div>
-</section>
+<script>
+/* ============================================================
+   ELENCO ARTICOLI  (il più recente per primo)
+
+   Per pubblicare un nuovo articolo:
+   1. duplica articoli/modello-articolo.html e rinominalo (es. articoli/gestione-informativa.html)
+   2. scrivi il testo nel nuovo file
+   3. aggiungi qui sotto una riga con titolo, data e link
+
+   "url" può essere una pagina del sito oppure un link esterno
+   (ad esempio un post LinkedIn): in quel caso aggiungi esterno: true
+   Finché l'elenco è vuoto la pagina mostra "Sezione in compilazione".
+   ============================================================ */
+const ARTICOLI = [
+  /* esempio:
+  {
+    titolo: "Perché il BIM in cantiere è un'opportunità e non un costo",
+    data: "2026-11-10",
+    estratto: "Come portare avanzamenti e schede materiale dentro il modello.",
+    url: "articoli/modello-articolo.html"
+  },
+  {
+    titolo: "Post su LinkedIn",
+    data: "2026-10-19",
+    estratto: "Breve descrizione del post.",
+    url: "https://www.linkedin.com/...",
+    esterno: true
+  }
+  */
+];
+
+const lista = document.getElementById("lista");
+const fmt = function (d) { return new Date(d).toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" }); };
+if (!ARTICOLI.length) {
+  lista.style.display = "block";
+  lista.innerHTML = '<div class="soon"><h2>Sezione in compilazione</h2><p>Stiamo preparando i primi approfondimenti. Per rimanere aggiornato seguici sui nostri canali social.</p></div>';
+} else {
+  ARTICOLI.slice().sort(function (a, b) { return b.data.localeCompare(a.data); }).forEach(function (a) {
+    const el = document.createElement("a");
+    el.className = "art-card";
+    el.href = a.url;
+    if (a.esterno) { el.target = "_blank"; el.rel = "noopener"; }
+    el.innerHTML = '<div class="body"><time datetime="' + a.data + '">' + fmt(a.data) + '</time><h3></h3><p></p><span class="more">' + (a.esterno ? "Leggi su LinkedIn →" : "Leggi l'articolo →") + '</span></div>';
+    el.querySelector("h3").textContent = a.titolo;
+    el.querySelector("p").textContent = a.estratto || "";
+    lista.appendChild(el);
+  });
+}
+</script>
+
 </main>
 
 <aside class="clients" id="clienti" hidden>
@@ -69,56 +108,6 @@
   </div>
 </footer>
 
-<script>
-/* ============================================================
-   ELENCO ARTICOLI  (il piu' recente per primo)
-
-   Per pubblicare un nuovo articolo:
-   1. duplica articoli/modello-articolo.html e rinominalo (es. articoli/gestione-informativa.html)
-   2. scrivi il testo nel nuovo file
-   3. aggiungi qui sotto una riga con titolo, data e link
-
-   "url" puo' essere una pagina del sito oppure un link esterno
-   (ad esempio un post LinkedIn): in quel caso aggiungi esterno: true
-   "img" (facoltativo): una delle illustrazioni in img/ come copertina
-   ============================================================ */
-const ARTICOLI = [
-  /* esempio:
-  {
-    titolo: "Perche' il BIM in cantiere e' un'opportunita' e non un costo",
-    data: "2026-10-29",
-    estratto: "Come portare avanzamenti e schede materiale dentro il modello senza appesantire chi lavora in cantiere.",
-    url: "articoli/modello-articolo.html",
-    img: "img/residenziale.png"
-  },
-  {
-    titolo: "Post su LinkedIn",
-    data: "2026-10-19",
-    estratto: "Breve descrizione del post.",
-    url: "https://www.linkedin.com/...",
-    esterno: true
-  }
-  */
-];
-
-const lista = document.getElementById("lista");
-const fmt = (d) => new Date(d).toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
-if (!ARTICOLI.length) {
-  lista.innerHTML = '<div class="empty" style="grid-column:1/-1"><h3 style="color:var(--blue);margin-bottom:8px">Presto online i primi articoli</h3><p>Stiamo preparando i primi approfondimenti. Per rimanere aggiornato seguici su LinkedIn.</p></div>';
-} else {
-  ARTICOLI.slice().sort((a, b) => b.data.localeCompare(a.data)).forEach((a) => {
-    const el = document.createElement("a");
-    el.className = "art";
-    el.href = a.url;
-    if (a.esterno) { el.target = "_blank"; el.rel = "noopener"; }
-    const cover = '<div class="cover">' + (a.img ? '<img src="' + a.img + '" alt="">' : '<img src="img/logo.png" alt="" style="height:70%;opacity:.9">') + '</div>';
-    el.innerHTML = cover + '<div class="body"><time datetime="' + a.data + '">' + fmt(a.data) + '</time><h3></h3><p></p><span class="more">' + (a.esterno ? "Leggi su LinkedIn →" : "Leggi l'articolo →") + '</span></div>';
-    el.querySelector("h3").textContent = a.titolo;
-    el.querySelector("p").textContent = a.estratto || "";
-    lista.appendChild(el);
-  });
-}
-</script>
 <script src="site.js"></script>
 </body>
 </html>

@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Progetti | PMxB Engineering Consulting</title>
-<meta name="description" content="Alcuni progetti di PMxB: gare pubbliche, capitolati informativi, clash detection, supporto BIM all'impresa e revisioni di pGI.">
+<meta name="description" content="Progetti di PMxB Engineering Consulting: validazione BIM, gare e documenti, modellazione e coordinamento, project management.">
 <link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,64 +32,44 @@
 <section class="p-hero">
   <div class="wrap">
     <span class="eyebrow">Progetti</span>
-    <h1>Dove il metodo diventa risultato.</h1>
-    <p>Alcuni ambiti in cui siamo intervenuti per enti pubblici imprese e studi di progettazione.</p>
+    <h1>Dove il metodo diventa <em>risultato.</em></h1>
+    <p>Una selezione di lavori per enti pubblici imprese e studi di progettazione. I nomi dei committenti sono riservati.</p>
   </div>
-  <div class="tri" style="margin-top:70px"><i></i><i></i><i></i><i></i></div>
 </section>
 
-<section class="sec-pad">
+<section style="padding:70px 0 120px">
   <div class="wrap">
-    <div class="proj">
-      <article class="pj">
-        <div class="im"><img src="img/ospedale.png" alt=""></div>
-        <div class="t">Gara pubblica</div>
-        <h3>Offerta di Gestione Informativa</h3>
-        <p>oGI per bandi BIM di enti pubblici con un team multidisciplinare.</p>
-      </article>
-      <article class="pj">
-        <div class="im"><img src="img/ponte.png" alt=""></div>
-        <div class="t">Infrastrutture</div>
-        <h3>Capitolato Informativo stradale</h3>
-        <p>Requisiti informativi per un'opera infrastrutturale di interesse regionale.</p>
-      </article>
-      <article class="pj">
-        <div class="im"><img src="img/industria.png" alt=""></div>
-        <div class="t">Clash Detection</div>
-        <h3>Coordinamento su Data Center</h3>
-        <p>Verifica delle interferenze tra discipline su un progetto di grandi dimensioni.</p>
-      </article>
-      <article class="pj">
-        <div class="im"><img src="img/residenziale.png" alt=""></div>
-        <div class="t">Cantiere</div>
-        <h3>Supporto BIM all'impresa</h3>
-        <p>Avanzamenti e schede materiale direttamente nei modelli per un centro sportivo.</p>
-      </article>
-      <article class="pj">
-        <div class="im txt"><b>Revisione critica<br>di pGI</b></div>
-        <div class="t">Revisione</div>
-        <h3>Piani di Gestione Informativa</h3>
-        <p>Analisi di pGI per interventi idraulici ed energetici su strutture pubbliche e sanitarie.</p>
-      </article>
-      <article class="pj">
-        <div class="im txt"><b>Fine lavori<br>impianto natatorio</b></div>
-        <div class="t">Direzione lavori</div>
-        <h3>Chiusura di tre appalti</h3>
-        <p>Supporto documentale alla DL per un complesso di appalti di rifunzionalizzazione.</p>
-      </article>
+    <div class="filters"><button class="chip on" data-f="all">Tutti</button><button class="chip" data-f="Validazione">Validazione</button><button class="chip" data-f="Gare e documenti">Gare e documenti</button><button class="chip" data-f="Modellazione e coordinamento">Modellazione e coordinamento</button><button class="chip" data-f="Progetto e cantiere">Progetto e cantiere</button><button class="chip" data-f="Consulenza e formazione">Consulenza e formazione</button></div>
+    <div class="pjgrid" id="pjgrid">
+      <article class="pj" data-cat="Validazione"><div class="pj-top"><span>Validazione</span><span>2026</span></div><h3>Nuovo stadio</h3><p>Validazione dei modelli del comparto architettonico.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Validazione"><div class="pj-top"><span>Validazione</span><span>2026</span></div><h3>Complesso della Difesa</h3><p>Validazione dei modelli BIM di tutte le discipline per un complesso della Marina Militare.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Validazione"><div class="pj-top"><span>Validazione</span><span>2025 — in corso</span></div><h3>Campus universitario</h3><p>Consulenza per la validazione dei modelli BIM del comparto strutturale di un ateneo.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Validazione"><div class="pj-top"><span>Validazione</span><span>2026</span></div><h3>Moduli scolastici</h3><p>Validazione BIM di moduli scolastici definitivi e sistemazioni esterne nell'ambito di una ricostruzione.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Validazione"><div class="pj-top"><span>Validazione</span><span>2020 — 2023</span></div><h3>Sviluppi urbani a Milano</h3><p>Validazione in progress dei modelli informativi di progetti esecutivi e costruttivi per grandi interventi residenziali.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Gare e documenti"><div class="pj-top"><span>Gare e documenti</span><span>2026 — in corso</span></div><h3>Linee guida e capitolati informativi</h3><p>Linee guida per le consorziate di un consorzio (enti sanitari e regionali) capitolati informativi per gare non ancora emesse template oGI e documenti per la valutazione.</p><div class="pj-role">BIM Expert</div></article>
+      <article class="pj" data-cat="Gare e documenti"><div class="pj-top"><span>Gare e documenti</span><span>2026</span></div><h3>Quattro palazzine per l'Aeronautica Militare</h3><p>Scrittura dell'offerta di gestione informativa e proposta metodologica di BIM Management.</p><div class="pj-role">BIM Manager</div></article>
+      <article class="pj" data-cat="Modellazione e coordinamento"><div class="pj-top"><span>Modellazione e coordinamento</span><span>2026</span></div><h3>Data center</h3><p>Clash detection e modellazione di supporto per gli impianti antincendio. Supporto alla modellazione e alla progettazione per un secondo data center.</p><div class="pj-role">BIM Coordinator · BIM Specialist</div></article>
+      <article class="pj" data-cat="Modellazione e coordinamento"><div class="pj-top"><span>Modellazione e coordinamento</span><span>2026</span></div><h3>Poliambulatori ospedalieri</h3><p>Modellazione MEP e redazione di tavole architettoniche e strutturali per nuovi poliambulatori di un ospedale a Brescia.</p><div class="pj-role">BIM Specialist MEP · BIM Coordinator</div></article>
+      <article class="pj" data-cat="Modellazione e coordinamento"><div class="pj-top"><span>Modellazione e coordinamento</span><span>2026</span></div><h3>Supporto BIM all'impresa</h3><p>Gara vinta per il supporto all'impresa con as-built in progress.</p><div class="pj-role">BIM Consultant · BIM Specialist</div></article>
+      <article class="pj" data-cat="Modellazione e coordinamento"><div class="pj-top"><span>Modellazione e coordinamento</span><span>2023 — 2025</span></div><h3>Cantieri impiantistici</h3><p>Modellazione costruttiva e coordinamento MEP a supporto del cantiere per un istituto scolastico e un hotel di alta quota con gestione dei SAL e analisi delle interferenze.</p><div class="pj-role">BIM Coordinator MEP</div></article>
+      <article class="pj" data-cat="Progetto e cantiere"><div class="pj-top"><span>Progetto e cantiere</span><span>2023 — 2025</span></div><h3>Quattro RSA in Lombardia</h3><p>Responsabilità di commessa per le opere impiantistiche in regime Superbonus 110% e gestione finanziaria come General Contractor.</p><div class="pj-role">Project Manager · Responsabile di commessa</div></article>
+      <article class="pj" data-cat="Progetto e cantiere"><div class="pj-top"><span>Progetto e cantiere</span><span>2024 — 2025</span></div><h3>Piscina comunale</h3><p>Supporto alla Direzione Lavori e al coordinamento per la sicurezza in fase di esecuzione per la manutenzione straordinaria di una piscina coperta.</p><div class="pj-role">Supporto alla DL e al CSE</div></article>
+      <article class="pj" data-cat="Progetto e cantiere"><div class="pj-top"><span>Progetto e cantiere</span><span>2025 — in corso</span></div><h3>Residenza privata in Val di Scalve</h3><p>Progetto e Direzione Lavori della ristrutturazione.</p><div class="pj-role">Progettista · Direttore dei Lavori</div></article>
+      <article class="pj" data-cat="Consulenza e formazione"><div class="pj-top"><span>Consulenza e formazione</span><span>2021 — 2025</span></div><h3>Audit di maturità digitale</h3><p>Analisi della maturità digitale e piani di implementazione BIM per studi aziende e Pubbliche Amministrazioni.</p><div class="pj-role">BIM Consultant</div></article>
+      <article class="pj" data-cat="Consulenza e formazione"><div class="pj-top"><span>Consulenza e formazione</span><span>2026</span></div><h3>Corso base per BIM Manager</h3><p>Erogazione del corso di formazione base per BIM Manager per il Comune di Padova.</p><div class="pj-role">Docente</div></article>
     </div>
   </div>
 </section>
 
-<section class="cta-sec">
+<script>
+(function(){var b=document.querySelectorAll(".chip"),c=document.querySelectorAll(".pj");b.forEach(function(x){x.addEventListener("click",function(){b.forEach(function(y){y.classList.remove("on")});x.classList.add("on");var f=x.getAttribute("data-f");c.forEach(function(k){k.style.display=(f==="all"||k.getAttribute("data-cat")===f)?"":"none"})})})})();
+</script>
+
+<section class="cta">
   <div class="wrap">
-    <div class="cta-band">
-      <div>
-        <h2>Hai un progetto?<br>Parlane con PMxB.</h2>
-        <p>Raccontaci di cosa hai bisogno. Costruiamo insieme la squadra giusta per la tua commessa.</p>
-      </div>
-      <a href="contatti.html" class="btn btn-white">Scrivici ora</a>
-    </div>
+    <h2>Hai un progetto?<br><em>Parlane con PMxB.</em></h2>
+    <p>Raccontaci di cosa hai bisogno. Costruiamo insieme la squadra giusta per la tua commessa.</p>
+    <a href="contatti.html" class="btn btn-solid">Scrivici ora</a>
   </div>
 </section>
 
