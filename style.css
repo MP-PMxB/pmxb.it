@@ -189,7 +189,7 @@ footer b{color:#fff;font-weight:500}
 .article p{margin-bottom:20px;font-size:1.12rem}
 .article ul{margin:0 0 20px 22px}
 .article blockquote{border-left:2px solid var(--blue);padding:4px 0 4px 24px;margin:32px 0;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ink);font-weight:300}
-.back{display:inline-block;margin-bottom:30px;color:var(--blue);font-weight:500}
+.back{display:block;margin-bottom:30px;color:var(--blue);font-weight:500}
 
 @media(max-width:960px){
   .burger{display:block}
@@ -269,3 +269,24 @@ footer b{color:#fff;font-weight:500}
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;padding-top:34px;border-top:1px solid rgba(255,255,255,.12)}
 .pills span{border:1px solid rgba(255,255,255,.22);padding:8px 16px;font-size:.84rem;color:#dbe4ec;border-radius:40px}
 @media(max-width:900px){.prod-head,.feat,.feat.rev{grid-template-columns:1fr;gap:28px}.feat.rev .ft{order:0}.prod{padding:70px 0}}
+
+/* V7 dettaglio progetti */
+a.pj{color:inherit;text-decoration:none}
+a.pj:hover h3{color:var(--blue)}
+.pj-more{margin-top:12px;font-size:.84rem;font-weight:500;color:var(--blue)}
+.back{display:block;font-size:.85rem;color:var(--mute);margin-bottom:26px;text-decoration:none}
+.back:hover{color:var(--blue)}
+.pjd{display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:start}
+.meta div{border-top:1px solid var(--line);padding:16px 0}
+.meta dt{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.meta dd{margin:0;color:var(--ink)}
+.pjd-text h2{font-family:var(--serif);font-weight:400;font-size:1.7rem;color:var(--ink);margin:0 0 14px}
+.pjd-text h2:not(:first-child){margin-top:44px}
+.pjd-text p{font-size:1.06rem;margin-bottom:16px}
+.pjd-text ul{list-style:none}
+.pjd-text li{padding:12px 0;border-top:1px solid var(--line)}
+.pjd-text .note{margin-top:40px;font-size:.88rem;color:var(--mute)}
+@media(max-width:900px){.pjd{grid-template-columns:1fr;gap:36px}}
+
+.cover{margin:0 0 20px}.cover img{width:100%}
+.cover img{border:0;box-shadow:none;max-width:900px;margin:0 auto}
